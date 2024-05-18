@@ -1,0 +1,196 @@
+/* Estilos generales */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: white;
+   color: black;
+   transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+   background-color: #121212;
+   color: white;
+}
+
+button {
+   padding: 10px 20px;
+   margin: 20px;
+   cursor: pointer;
+}
+
+/* Estilos para el contenido principal */
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   padding: 20px;
+}
+
+.intro {
+   text-align: center;
+   font-size: 1.2em;
+   margin-bottom: 20px;
+}
+
+.intro h1 {
+   font-size: 3em;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   padding: 20px;
+   border-top: 1px solid #e6e6e6;
+}
+
+.content h2 {
+   font-size: 2em;
+   margin-bottom: 20px;
+}
+
+.content p {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.image {
+   width: 400px;
+   height: 400px;
+   background-color: #333;
+   margin-bottom: 20px;
+   border-radius: 10px;
+}
+
+/* Estilos para el carrusel */
+.p {
+   text-align: justify;
+}
+
+.img-fluid {
+   width: 300px;
+   height: 300px;
+   border-radius: 0 0 0 6px;
+}
+
+/* Estilos para los servicios */
+#services {
+   padding: 50px 0;
+}
+
+.service-item {
+   background-color: #ffffff;
+   padding: 30px;
+   margin-bottom: 30px;
+   border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   transition: transform 0.4s ease-in-out;
+}
+
+.service-item:hover {
+   transform: translateY(-10px);
+}
+
+.service-item i {
+   font-size: 40px;
+   color: #007bff;
+   margin-bottom: 20px;
+   display: inline-block;
+}
+
+.service-item h3 {
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.service-item p {
+   font-size: 16px;
+   color: #6c757d;
+}
+
+/* Estilos para la galería de fotos */
+#gallery {
+   padding: 50px 0;
+}
+
+.img-gallery {
+   width: 400px;
+   height: 300px;
+}
+
+.gallery-item {
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 30px;
+   width: 400px;
+   height: 300px;
+}
+
+.gallery-item img {
+   width: 100%;
+   transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+   transform: scale(1.1);
+}
+
+.gallery-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: #ffffff;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.gallery-item:hover .gallery-overlay {
+   opacity: 1;
+}
+
+.gallery-overlay i {
+   font-size: 40px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+   .footer .social-icons {
+       text-align: center;
+       margin-bottom: 20px;
+   }
+
+   .footer .contact-info {
+       text-align: center;
+   }
+}
+
+/*===================Estilos Formulario==========================*/
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    font-weight: normal;
+}
