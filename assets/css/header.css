@@ -1,13 +1,25 @@
-/* Estilos para la cabecera */
+/* Estilos para el header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f3f3f3;
     width: 100%;
     height: 100px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
+
+/* Estilo para el elemento <li> resaltado */
+.highlight a {
+    background-color: #f55c04;
+    color: white;
+    border-radius: 5px;
+}
+
 
 /* Estilos para el logotipo */
 .logo {
@@ -19,7 +31,8 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 100px; /* Ajusta la altura del logo */
+    width: auto;  /* Mantén la proporción de la imagen */
     margin-right: 20px;
 }
 

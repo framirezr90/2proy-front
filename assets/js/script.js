@@ -10,122 +10,77 @@ var myCarousel = document.querySelector('#doubleCarousel');
 
     document.addEventListener("DOMContentLoaded", () => {
         const toggleButton = document.getElementById("toggle-dark-mode");
+        const moonIcon = document.getElementById("icon-moon");
     
         // Verificar el modo guardado en localStorage
         if (localStorage.getItem("darkMode") === "enabled") {
             document.body.classList.add("dark-mode");
-            toggleButton.textContent = "Cambiar a modo claro";
+            moonIcon.classList.remove("fa-moon");
+            moonIcon.classList.add("fa-sun");
         }
     
         toggleButton.addEventListener("click", () => {
             document.body.classList.toggle("dark-mode");
     
             if (document.body.classList.contains("dark-mode")) {
-                toggleButton.textContent = "Cambiar a modo claro";
+                moonIcon.classList.remove("fa-moon");
+                moonIcon.classList.add("fa-sun");
                 localStorage.setItem("darkMode", "enabled");
             } else {
-                toggleButton.textContent = "Cambiar a modo oscuro";
+                moonIcon.classList.remove("fa-sun");
+                moonIcon.classList.add("fa-moon");
                 localStorage.setItem("darkMode", "disabled");
             }
         });
     });
     
-/*=========================  Formulario  ================================= 
-    $(document).ready(function() {
-        $('#terminosCheck').on('change', function() {
-            $(this).closest('.form-check').toggleClass('is-checked', $(this).is(':checked'));
-        });
-    });
 
-    function validarFormulario() {
-        var form = document.getElementById('contactForm');
-        var nombre = form['nombre'].value.trim();
-        var apellido = form['apellido'].value.trim();
-        var correo = form['correo'].value.trim();
-        var telefono = form['telefono'].value.trim();
-        var direccion = form['direccion'].value.trim();
-        var mensaje = form['mensaje'].value.trim();
-        var servicio = form['servicio'].value;
-        var terminos = form['terminos'].checked;
 
-        // Validar campos obligatorios
-        if (!nombre || !apellido || !correo || !telefono || !direccion || !mensaje || !servicio || !terminos) {
-            alert('Por favor, complete todos los campos obligatorios.');
-            return false;
-        }
-
-        // Validar formato de correo electrónico
-        var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!correoRegex.test(correo)) {
-            alert('Por favor, ingrese un correo electrónico válido.');
-            return false;
-        }
-
-        // Validar longitud del teléfono
-        if (telefono.length < 8) {
-            alert('Por favor, ingrese un número de teléfono válido.');
-            return false;
-        }
-
-        // Validar longitud del mensaje
-        if (mensaje.length > 1000) {
-            alert('El mensaje no puede exceder los 1000 caracteres.');
-            return false;
-        }
-
-        // Todo validado correctamente
-        return true;
-    }
-*/
-
- /**formulario 2 */
+ /**formulario  */
 
 
     // Función para validar el formulario y mostrar el modal
-    function validarFormulario(event) {
-        event.preventDefault(); // Prevenir el envío del formulario por defecto
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-        var form = document.getElementById('contactForm');
-        var nombre = form['nombre'].value.trim();
-        var apellido = form['apellido'].value.trim();
-        var correo = form['correo'].value.trim();
-        var telefono = form['telefono'].value.trim();
-        var direccion = form['direccion'].value.trim();
-        var mensaje = form['mensaje'].value.trim();
-        var servicio = form['servicio'].value;
-        var terminos = form['terminos'].checked;
+        const modalMessage = 'Mensaje enviado exitosamente';
 
-        // Validar campos obligatorios
-        if (!nombre || !apellido || !correo || !telefono || !direccion || !mensaje || !servicio || !terminos) {
-            alert('Por favor, complete todos los campos obligatorios.');
-            return false;
-        }
-
-        // Validar formato de correo electrónico
-        var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!correoRegex.test(correo)) {
-            alert('Por favor, ingrese un correo electrónico válido.');
-            return false;
-        }
-
-        // Validar longitud del teléfono
-        if (telefono.length < 8) {
-            alert('Por favor, ingrese un número de teléfono válido.');
-            return false;
-        }
-
-        // Validar longitud del mensaje
-        if (mensaje.length > 1000) {
-            alert('El mensaje no puede exceder los 1000 caracteres.');
-            return false;
-        }
-
-        // Mostrar el modal de éxito
-        $('#successModal').modal('show');
-        return true;
-    }
-
-    $(document).ready(function() {
-        $('#contactForm').submit(validarFormulario);
+        document.getElementById('modal-message').innerText = modalMessage;
+        document.getElementById('modal-overlay').style.display = 'block';
+        document.getElementById('modal').style.display = 'block';
     });
 
+    document.getElementById('modal-close').addEventListener('click', function() {
+        document.getElementById('modal-overlay').style.display = 'none';
+        document.getElementById('modal').style.display = 'none';
+        location.reload(); // Recargar la página
+    });
+
+    document.getElementById('terms-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('terms-overlay').style.display = 'block';
+        document.getElementById('terms-modal').style.display = 'block';
+    });
+
+    document.getElementById('terms-close').addEventListener('click', function() {
+        document.getElementById('terms-overlay').style.display = 'none';
+        document.getElementById('terms-modal').style.display = 'none';
+    });
+
+/* Voy a revisar algo  */
+document.addEventListener('DOMContentLoaded', function () {
+    // Agregar clase visible después de un pequeño retraso
+    setTimeout(function() {
+        document.getElementById('teamSection').classList.add('visible');
+    }, 100);
+
+    var teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach(function (member) {
+        member.addEventListener('mouseenter', function () {
+            this.querySelector('img').style.transform = 'scale(1.1)';
+        });
+        member.addEventListener('mouseleave', function () {
+            this.querySelector('img').style.transform = 'scale(1)';
+        });
+    });
+});
