@@ -15,18 +15,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"
         rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/FAQ.css">
+    <link rel="stylesheet" href="css/header2.css">
+    <link rel="stylesheet" href="css/FAQ2.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/form.css">
-
+    <link rel="stylesheet" href="css/form2.css">
+     -->
+      <!-- Custom CSS Actualizado-->
+      <link rel="stylesheet" href="css2/style.css">
+    <link rel="stylesheet" href="css2/header.css">
+    <link rel="stylesheet" href="css2/start.css">
+    <link rel="stylesheet" href="css2/services.css">
+    <link rel="stylesheet" href="css2/gallery.css">
+    <link rel="stylesheet" href="css2/history.css">
+    <link rel="stylesheet" href="css2/history.css">
+    <link rel="stylesheet" href="css2/team.css">
+    <link rel="stylesheet" href="css2/contactUs.css">
+    <link rel="stylesheet" href="css2/faq.css">
+    <link rel="stylesheet" href="css2/footer.css">
+    
 </head>
 
 <body>
     <!-- Header -->
+   
     <header class="header-with-border">
+        
         <!-- Logo y Navegación -->
         <div class="logo">
             <a href=""><img src="img/new-logo.png" alt="Logo Empresa"></a>
@@ -38,13 +53,14 @@
                 <li><a href="#gallery">Galería</a></li>
                 <li><a href="#history">Historia</a></li>
                 <li><a href="#team">Equipo</a></li>
-                <li><a href="#contact-us">Contáctanos</a></li>
+                <li><a href="#contactUs">Contáctanos</a></li>
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
                 <li id="dark-mode-toggle"><a href="#" id="toggle-dark-mode"><i id="icon-moon"
                             class="fa-solid fa-moon"></i></a></li>
             </ul>
         </nav>
     </header>
+    </div>
 
     <main>
         <!-- Carousel Section -->
@@ -146,15 +162,21 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="section">
+        <section id="services" class="section" class="dark-section">
+        
+    <!-- Contenido de la sección Historia -->
+    <!-- Contenido de la sección Nuestros Servicios -->
+
             <!-- Services Content -->
             <div class="container">
+            <div class="service-item card-dark">
                 <h2 class="text-center mb-5">Nuestros Servicios</h2>
                 <div class="row">
+                    
                     <!-- Service Items -->
                     <div class="col-md-6">
                         <div class="service-item">
-                            <i class="fas fa-snowflake"></i>
+                            <i class="fas fa-snowflake" style="color:lightblue" ></i>
                             <h3>Aire Acondicionado</h3>
                             <p class="p-service">El mantenimiento del aire acondicionado incluye limpiar filtros y
                                 bobinas, revisar
@@ -181,7 +203,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="service-item">
-                            <i class="fas fa-tint"></i>
+                            <i class="fas fa-tint" style="color:#0E6655" ></i>
                             <h3>Sala de Bombas</h3>
                             <p class="p-service">El mantenimiento de la sala de bombas incluye revisar sellos, lubricar
                                 partes móviles,
@@ -190,6 +212,8 @@
                     </div>
                 </div>
             </div>
+            </div>
+            
         </section>
 
         <!-- Gallery Section -->
@@ -253,12 +277,18 @@
 
         <!-- Sección Historia -->
         <section id="history" class="section">
+    <!-- Contenido de la sección Historia -->
+            <!-- Carta en la sección Historia -->
+
             <div class="container">
                 <h2 class="text-center mb-5"> Historia <i class="fas fa-book-open"></i></h2>
                 <div class="row">
 
                     <div class="col-md-12">
-                        <div class="service-item">
+                    <div class="history-item card-dark">
+        <!-- Contenido de la carta Historia -->
+    
+                        <div class="history-item">
 
                             <h3>Mizraim Abello Avello</h3>
                             <h4>Fundador</h4>
@@ -279,15 +309,16 @@
 
                                 </p>
                             </div>
-                        </div>
+                        
                     </div>
 
+                </div>
                 </div>
 
             </div>
 
 
-        </section>
+            </section>
 
         <!-- sección Nuestro Equipo -->
         <section id="team">
@@ -339,7 +370,7 @@
         </section> <!--  Fin sección Nuestro equipo  -->
 
         <!--Formulario-->
-        <section id="contact-us">
+        <section id="contactUs">
             <div class="row">
 
                 <div class="col-md-12">
@@ -456,7 +487,7 @@
                     <h4>Contácto</h4>
                     <p><a href="https://maps.app.goo.gl/tStDViai1aYSSrv7A"><i class="fas fa-map-marker-alt"></i>
                             Manquehue Sur 520, oficina 205, Las Condes</a></p>
-                    <p><a href="mailto:contacto@energyandwater.cl"></a><i class="fas fa-envelope"></i>
+                    <p><a href="mailto:contacto@energyandwater.cl "></a><i class="fas fa-envelope"></i>
                         contacto@energyandwater.cl</a></p>
                     <p><i class="fas fa-phone"></i> +56232569798</p>
                 </div>
@@ -491,8 +522,8 @@
 
     <!-- Custom Scripts -->
 
-    <script src="js/script.js"></script>
-    <script src="js/navbar.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/navbar2.js"></script>
     <script src="js/categorias.js"></script>
     <script src="js/preguntasFrecuentes.js"></script>
 

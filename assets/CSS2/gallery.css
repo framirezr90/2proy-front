@@ -1,0 +1,52 @@
+/* Estilos para la galería de fotos */
+#gallery {
+    padding: 50px 0;
+ }
+ 
+ .img-gallery {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+ }
+ 
+ .gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 300px;
+ }
+ 
+ .gallery-item img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+ }
+ 
+ .gallery-item:hover img {
+    transform: scale(1.1);
+ }
+ 
+ .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+ }
+ 
+ .gallery-overlay i {
+    font-size: 40px;
+ }
+
+ 

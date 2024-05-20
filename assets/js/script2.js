@@ -11,12 +11,20 @@ var myCarousel = document.querySelector('#doubleCarousel');
     document.addEventListener("DOMContentLoaded", () => {
         const toggleButton = document.getElementById("toggle-dark-mode");
         const moonIcon = document.getElementById("icon-moon");
+        const header = document.querySelector("header");
+        const servicesSection = document.getElementById("services");
+        const historySection = document.getElementById("history");
+
+
     
         // Verificar el modo guardado en localStorage
         if (localStorage.getItem("darkMode") === "enabled") {
             document.body.classList.add("dark-mode");
             moonIcon.classList.remove("fa-moon");
             moonIcon.classList.add("fa-sun");
+            header.classList.add("dark-mode"); // Agregar la clase de modo oscuro al header
+            servicesSection.classList.add("dark-mode"); // Agregar la clase de modo oscuro a Nuestros Servicios
+            historySection.classList.add("dark-mode"); // Agregar la clase de modo oscuro a Historia
         }
     
         toggleButton.addEventListener("click", () => {
@@ -26,13 +34,21 @@ var myCarousel = document.querySelector('#doubleCarousel');
                 moonIcon.classList.remove("fa-moon");
                 moonIcon.classList.add("fa-sun");
                 localStorage.setItem("darkMode", "enabled");
+                header.classList.add("dark-mode"); // Agregar la clase de modo oscuro al header
+                servicesSection.classList.add("dark-mode"); // Agregar la clase de modo oscuro a Nuestros Servicios
+                historySection.classList.add("dark-mode"); // Agregar la clase de modo oscuro a Historia
             } else {
                 moonIcon.classList.remove("fa-sun");
                 moonIcon.classList.add("fa-moon");
                 localStorage.setItem("darkMode", "disabled");
+                header.classList.remove("dark-mode"); // Remover la clase de modo oscuro del header
+                servicesSection.classList.remove("dark-mode"); // Remover la clase de modo oscuro de Nuestros Servicios
+                historySection.classList.remove("dark-mode"); // Remover la clase de modo oscuro de Historia
             }
-        });
-    });
+        });
+    });
+    
+    
     
 
 
